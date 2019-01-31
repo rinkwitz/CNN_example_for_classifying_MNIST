@@ -6,16 +6,17 @@ Created on Tue Sep 11 18:16:36 2018
 @author: lovelace
 """
 
-import numpy as np
+#import numpy as np
+#import matplotlib
 import matplotlib.pyplot as plt
 from mpl_toolkits import mplot3d
 import keras
 from keras.models import Sequential
-from keras.optimizers import *
+#from keras.optimizers import *
 from keras.layers import *
-import cv2
+#import cv2
 
-%matplotlib qt
+#%matplotlib qt
 
 # load dataset:
 from keras.datasets import mnist
@@ -111,13 +112,13 @@ from keras.callbacks import TensorBoard
 tensorboard = TensorBoard(log_dir="logs/{}".format(time()))
 
 # show tensorboard after training
-model.fit(x_train, y_train, epochs=5, batch_size=32, callbacks=[tensorboard])
+model.fit(x_train, y_train, epochs=5, batch_size=32, callbacks=[tensorboard], shuffle=True, validation_data=(x_test, y_test))
 
 # testing:
-testing_scores = model.evaluate(x_test, y_test, batch_size=32)
+testing_scores = model.evaluate(x_test, y_test, batch_size=32, verbose=0)
 print('testing accuracy:\t', round(testing_scores[1] * 100, 3), '%', 
       '\ntesting loss:\t\t', round(testing_scores[0], 3))
-training_scores = model.evaluate(x_train, y_train, batch_size=32)
+training_scores = model.evaluate(x_train, y_train, batch_size=32, verbose=0)
 print('training accuracy:\t', round(training_scores[1] * 100, 3), '%', 
       '\ntraining loss:\t\t', round(training_scores[0], 3))
 
