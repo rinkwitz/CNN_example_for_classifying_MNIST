@@ -6,15 +6,11 @@ Created on Tue Sep 11 18:16:36 2018
 @author: lovelace
 """
 
-#import numpy as np
-#import matplotlib
 import matplotlib.pyplot as plt
 from mpl_toolkits import mplot3d
 import keras
 from keras.models import Sequential
-#from keras.optimizers import *
 from keras.layers import *
-#import cv2
 
 #%matplotlib qt
 
