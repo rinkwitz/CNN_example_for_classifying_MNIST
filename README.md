@@ -32,5 +32,5 @@ Give an example
 ```
 
 # Add Figures:
-![figure](/img/acc.png){:class="img-responsive"}
 ![figure](/img/acc.png){:height="50%" width="50%"}
+<img src="/img/acc.png" alt="training accuracy" width="100">
