@@ -32,5 +32,4 @@ Give an example
 ```
 
 # Add Figures:
-![figure](/img/acc.png){:height="50%" width="50%"}
-<img src="/img/acc.png" alt="training accuracy" width="100">
+<img src="/img/acc.png" alt="training accuracy" width="800">
