@@ -45,7 +45,20 @@ Here are the first 4 training examples after standardization.
 
 ## Visualizations of Training and Validation
 
-The CNN is trained over 10 epochs using the Adam optimizer and categorical cross entropy as loss. The following figure show the accuracy and loss on training and validation set over the training process. 
+The CNN is trained over 10 epochs using the Adam optimizer and categorical cross entropy as loss.
+
+CNN Architecture:
+* 8 nodes using 3 x 3 convolutions, activation: ReLu
+* Max Pooling using a pool size of 2 x 2, activation: ReLu
+* 8 nodes using 3 x 3 convolutions, activation: ReLu
+* Max Pooling using a pool size of 2 x 2, activation: ReLu
+* Flatten
+* Dense layer with 128 nodes, activation: ReLu
+* Dense layer with 128 nodes, activation: ReLu
+* Dense layer with 128 nodes, activation: ReLu
+* Dense layer with 10 nodes, activation: Softmax
+
+The following figure show the accuracy and loss on training and validation set over the training process. 
 
 * Training set:
 
