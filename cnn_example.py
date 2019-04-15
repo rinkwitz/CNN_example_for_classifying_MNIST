@@ -4,8 +4,6 @@ import keras
 from keras.models import Sequential
 from keras.layers import *
 
-#%matplotlib qt
-
 # load dataset:
 from keras.datasets import mnist
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
@@ -13,29 +11,28 @@ x_test_copy = x_test.copy()
 y_test_copy = y_test.copy()
 
 # show example image:
-num_images = 5
-for i in range(num_images):
-    plt.subplot(1, num_images, i + 1)
+for i in range(9):
+    plt.subplot(3, 3, i + 1)
     plt.title(y_train[i])
-    plt.imshow(x_train[i], cmap = 'gray', interpolation = 'bicubic')
+    plt.imshow(x_train[i], cmap='gray', interpolation='bicubic')
     plt.xticks([]), plt.yticks([])
 plt.show()
 
-# why standardize?:
-num_images = 5
+# show image data before standardization:
 stepsize = 1
-for num_image in range(num_images):
+fig, ax = plt.subplots(2, 2)
+for i in range(4):
+    plt.subplot(2, 2, i + 1)
     x, y, z = [], [], []
     for y_coord in range(0, 28, stepsize):
         for x_coord in range(0, 28, stepsize):
                 x.append(x_coord)
                 y.append(y_coord)
-                z.append(x_train[num_image, x_coord, y_coord])
-              
-    fig = plt.figure()
-    ax = fig.add_subplot(111, projection='3d')
-    ax.scatter(x, y, z, c=z, cmap=plt.hot())
-    plt.show()
+                z.append(x_train[i, x_coord, y_coord])
+    ax = fig.add_subplot(22 * 10 + i + 1, projection='3d')
+    ax.scatter(x, y, z, c=z, cmap='gnuplot')
+    plt.title("{}\n".format(y_train[i]))
+plt.show()
     
 # standardize data:
 mean = np.mean(x_train, axis=0)
@@ -46,23 +43,23 @@ x_test = x_test - mean
 x_train = x_train / std
 x_test = x_test / std
 
-# why standardize? result:
+# show image data after standardization:
 stepsize = 1
-for num_image in range(num_images):
+fig, ax = plt.subplots(2, 2)
+for i in range(4):
+    plt.subplot(2, 2, i + 1)
     x, y, z = [], [], []
     for y_coord in range(0, 28, stepsize):
         for x_coord in range(0, 28, stepsize):
                 x.append(x_coord)
                 y.append(y_coord)
-                z.append(x_train[num_image, x_coord, y_coord])
-              
-    fig = plt.figure()
-    ax = fig.add_subplot(111, projection='3d')
-    ax.scatter(x, y, z, c=z, cmap=plt.hot())
-    plt.show()
+                z.append(x_train[i, x_coord, y_coord])
+    ax = fig.add_subplot(22 * 10 + i + 1, projection='3d')
+    ax.scatter(x, y, z, c=z, cmap='gnuplot')
+    plt.title("{}\n".format(y_train[i]))
+plt.show()
     
-# define ann:
-# show link to cnn visualization
+# define cnn:
 model = Sequential()
 model.add(Conv2D(8, (3, 3), activation='relu', padding='same', input_shape=(28, 28, 1)))
 model.add(MaxPool2D(pool_size=(2, 2)))
@@ -81,33 +78,25 @@ model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accur
 print(model.summary())
 
 # reshape because of technical reasons:
-print('old x shape:', x_train.shape)
-print('old y shape:', y_train.shape)
-print('old y at index 0:', y_train[0])
-print('old y at index 1:', y_train[1], '\n')
 x_train = x_train.reshape((-1, 28, 28, 1))
 x_test = x_test.reshape((-1, 28, 28, 1))
 y_train = keras.utils.to_categorical(y_train, num_classes=10)
 y_test = keras.utils.to_categorical(y_test, num_classes=10)
-print('new x shape:', x_train.shape)
-print('new y at index 0:', y_train[0])
-print('new y at index 1:', y_train[1])
-print('new y shape:', y_train.shape)
 
-# for learning visualization:
+# for learning visualization with tensorboard:
 from time import time
 from keras.callbacks import TensorBoard
 tensorboard = TensorBoard(log_dir="logs/{}".format(time()))
 
-# show tensorboard after training
-model.fit(x_train, y_train, epochs=5, batch_size=32, callbacks=[tensorboard], shuffle=True, validation_data=(x_test, y_test))
+# train the model
+model.fit(x_train, y_train, epochs=10, batch_size=32, callbacks=[tensorboard], shuffle=True, validation_data=(x_test, y_test))
 
-# testing:
+# show final metrics and loss on both test and training set:
 testing_scores = model.evaluate(x_test, y_test, batch_size=32, verbose=0)
-print('testing accuracy:\t', round(testing_scores[1] * 100, 3), '%', 
+print('\naccuracy:\t', round(testing_scores[1] * 100, 3), '%',
       '\ntesting loss:\t\t', round(testing_scores[0], 3))
 training_scores = model.evaluate(x_train, y_train, batch_size=32, verbose=0)
-print('training accuracy:\t', round(training_scores[1] * 100, 3), '%', 
+print('\ntraining accuracy:\t', round(training_scores[1] * 100, 3), '%',
       '\ntraining loss:\t\t', round(training_scores[0], 3))
 
 # view some predictions:
@@ -124,6 +113,6 @@ for i in range(3):
         predicted_label = prediction_row.argmax()
         title = str(predicted_label) + '  ' + str(round(prediction_row_max * 100, 2)) + '%'
         plt.title(title)
-        plt.imshow(x_view_original[(i * 3) + j], cmap = 'gray', interpolation = 'bicubic')
+        plt.imshow(x_view_original[(i * 3) + j], cmap='gray', interpolation='bicubic')
         plt.xticks([]), plt.yticks([])
 plt.show()

@@ -1,37 +1,35 @@
+# CNN example for classifying MNIST
 
-CNN Example for classifying MNIST
-=================================
+One Paragraph of project description goes here
 
+## Getting Started
 
-## Table of content
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-- [Installation](#installation)
-    - [TER](#typo3-extension-repository)
-    - [Composer](#composer)
-- [License](#license)
-- [Links](#links)
+### Prerequisites
 
-## Installation
+What things you need to install the software and how to install them
 
+```
+Give examples
+```
 
+## Authors
+
+* [Philip Rinkwitz](https://github.com/rinkwitz)
 
 ## License
 
-The CNN_example_for_classifying_MNIST  is licensed under the terms of the MIT license and is available for free.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Links
+## Useful Links:
+[Visualization of 2D CNN]http://scs.ryerson.ca/~aharley/vis/conv/flat.html
+[Blog entry on using Tensorboard]https://fizzylogic.nl/2017/05/08/monitor-progress-of-your-keras-based-neural-network-using-tensorboard/
 
-* [Web site](http://scs.ryerson.ca/~aharley/vis/conv/flat.html)
-* [Web site](http://fizzylogic.nl/2017/05/08/monitor-progress-of-your-keras-based-neural-network-using-tensorboard/)
-
-
-
-
+# Add Code:
+```
+Give an example
+```
 
 # Add Figures:
-![alt description](https://images.unsplash.com/photo-1462888210965-cdf193fb74de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80)
-
-# Add Code Snippets:
-```
-code snippet goes here ... 
-```
+![alt description](https://...)
