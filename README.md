@@ -22,7 +22,7 @@ pip3 install tensorflow==1.11.0 tensorboard==1.11.0 keras==2.2.4 matplotlib==3.0
 The script produces several figures. It displays the first 9 training examples and their labels.
 
 <p align="center">
-<img src="/img/Figure_0.png" alt="examples and labels" width="500">
+<img src="/img/Figure_0.png" alt="examples and labels" width="700">
 </p>
 
 The MNIST dataset consists of 28x28 greyscale images. Another way of visualizing the images would be to make a 3D plot with coordinates (x, y, z). This way we could use (x, y) to describe the position of a pixel in the image and the z-coordinate to show the 8-bit greyscale vale of that pixel. The next figure shows the first 4 training example and their labels.
