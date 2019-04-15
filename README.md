@@ -1,17 +1,19 @@
 # CNN example for classifying MNIST
 
-One Paragraph of project description goes here
+This project is intended for educational purposes. It demonstrates the effectiveness of a simple CNN architecture classfying the MNIST dataset. The neural netwok is trained solely on the CPU in reasonable time (~5 min).
 
-## Getting Started
+## Prerequisites
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+The software makes use of the following libraries for training and visualization:
+* Tensorflow 1.11.0
+* Tensorboard 1.11.0
+* Keras 2.2.4
+* Matplotlib 3.0.0
 
-### Prerequisites
-
-What things you need to install the software and how to install them
+You can install the dependencies using:
 
 ```
-Give examples
+pip3 install tensorflow==1.11.0 tensorboard==1.11.0 keras==2.2.4 matplotlib==3.0.0
 ```
 
 ## Authors
@@ -23,13 +25,9 @@ Give examples
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Useful Links:
-[Visualization of 2D CNN]http://scs.ryerson.ca/~aharley/vis/conv/flat.html
-[Blog entry on using Tensorboard]https://fizzylogic.nl/2017/05/08/monitor-progress-of-your-keras-based-neural-network-using-tensorboard/
+[Visualization of 2D CNN](http://scs.ryerson.ca/~aharley/vis/conv/flat.html)
+[Blog entry on using Tensorboard](https://fizzylogic.nl/2017/05/08/monitor-progress-of-your-keras-based-neural-network-using-tensorboard/)
 
-# Add Code:
-```
-Give an example
-```
 
 # Add Figures:
-<img src="/img/acc.png" alt="training accuracy" width="500">
+<img src="/img/acc.png" alt="training accuracy" style="align:center; width=500;" >
