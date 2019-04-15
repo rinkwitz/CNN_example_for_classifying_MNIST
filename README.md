@@ -30,4 +30,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 
 # Add Figures:
-<img src="/img/acc.png" alt="training accuracy" align="middle" width="500">
+<p align="center">
+<img src="/img/acc.png" alt="training accuracy" width="500">
+</p>
