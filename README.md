@@ -38,6 +38,8 @@ a
 ```
 x_{\text{std}}=\frac{x-\mu_{\text{feat}}}{\sigma_{\text{feat}}}	
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=x_{\text{std}}=\frac{x-\mu_{\text{feat}}}{\sigma_{\text{feat}}}" target="_blank">
+<img src="https://latex.codecogs.com/gif.latex?x_{\text{std}}=\frac{x-\mu_{\text{feat}}}{\sigma_{\text{feat}}}" title="x_{\text{std}}=\frac{x-\mu_{\text{feat}}}{\sigma_{\text{feat}}}" /></a>
 ## Authors
 
 * [Philip Rinkwitz](https://github.com/rinkwitz)
