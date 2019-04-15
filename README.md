@@ -1,6 +1,6 @@
 # CNN example for classifying MNIST
 
-This project is intended for educational purposes. It demonstrates the effectiveness of a simple CNN architecture classfying the MNIST dataset. The neural netwok is trained solely on the CPU in reasonable time (~5 min).
+This project is intended for educational purposes. It demonstrates the effectiveness of a simple CNN architecture classifying the MNIST dataset. The neural network is trained solely on the CPU in reasonable time (~5 min).
 
 ## Prerequisites
 
@@ -25,13 +25,13 @@ The script produces several figures. It displays the first 9 training examples a
 <img src="/img/Figure_0.png" alt="examples and labels" width="750">
 </p>
 
-The MNIST dataset consists of 28x28 greyscale images. Another way of visualizing the images would be to make a 3D plot with coordinates (x, y, z). This way we could use (x, y) to describe the position of a pixel in the image and the z-coordinate to show the 8-bit greyscale vale of that pixel. The next figure shows the first 4 training example and their labels.
+The MNIST data set consists of 28 x 28 grayscale images. Another way of visualizing the images would be to make a 3D plot with coordinates (x, y, z). This way we could use (x, y) to describe the position of a pixel in the image and the z-coordinate to show the 8-bit grayscale vale of that pixel. The next figure shows the first 4 training example and their labels.
 
 <p align="center">
 <img src="/img/Figure_1.png" alt="examples and labels in 3D" width="750">
 </p>
 
-In order for gradient descent to converge as fast as possible, we need to standardize our data. For this we substract the mean and divide by the standard deviation feature-wise:
+In order for gradient descent to converge as fast as possible, we need to standardize our data. For this we subtract the mean and divide by the standard deviation feature-wise:
 
 <p align="center">
 <img src="https://latex.codecogs.com/gif.latex?x_{\text{std}}=\frac{x-\mu_{\text{feat}}}{\sigma_{\text{feat}}}" title="equation 01" />
@@ -45,7 +45,7 @@ Here are the first 4 training examples after standardization.
 
 ## Visualizations of Training and Validation
 
-The CNN is trained over 10 epochs using the Adam optimizer and categorical crossentropy as loss. The following figure show the accuracy and loss on training and validation set over the training process. 
+The CNN is trained over 10 epochs using the Adam optimizer and categorical cross entropy as loss. The following figure show the accuracy and loss on training and validation set over the training process. 
 
 * Training set:
 
@@ -75,7 +75,7 @@ tensorboard --logdir=logs/
 
 ## Results
 
-Here are some random predictions over the testing set. In the title you can see the predicted label and the probability whith which the CNN has assigned the label.
+Here are some random predictions over the testing set. In the title you can see the predicted label and the probability with which the CNN has assigned the label.
 
 <p align="center">
 <img src="/img/Figure_3.png" alt="prediction" width="750">
