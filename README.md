@@ -29,7 +29,7 @@ The CNN_example_for_classifying_MNIST  is licensed under the terms of the MIT li
 
 
 # Add Figures:
-[alt description](https://images.unsplash.com/photo-1462888210965-cdf193fb74de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80)
+![alt description](https://images.unsplash.com/photo-1462888210965-cdf193fb74de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80)
 
 # Add Code Snippets:
 ```
