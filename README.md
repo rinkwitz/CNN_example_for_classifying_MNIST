@@ -47,7 +47,7 @@ Here are the first 4 training examples after standardization.
 
 The CNN is trained over 10 epochs using the Adam optimizer and categorical cross entropy as loss.
 
-CNN Architecture:
+CNN architecture:
 * 8 nodes using 3 x 3 convolutions, activation: ReLu
 * Max Pooling using a pool size of 2 x 2, activation: ReLu
 * 8 nodes using 3 x 3 convolutions, activation: ReLu
