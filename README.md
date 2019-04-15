@@ -49,9 +49,9 @@ The CNN is trained over 10 epochs using the Adam optimizer and categorical cross
 
 CNN architecture:
 * 8 nodes using 3 x 3 convolutions, activation: ReLu
-* Max Pooling using a pool size of 2 x 2, activation: ReLu
+* Max Pooling using a pool size of 2 x 2
 * 8 nodes using 3 x 3 convolutions, activation: ReLu
-* Max Pooling using a pool size of 2 x 2, activation: ReLu
+* Max Pooling using a pool size of 2 x 2
 * Flatten
 * Dense layer with 128 nodes, activation: ReLu
 * Dense layer with 128 nodes, activation: ReLu
