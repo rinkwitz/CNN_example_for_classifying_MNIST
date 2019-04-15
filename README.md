@@ -32,4 +32,4 @@ Give an example
 ```
 
 # Add Figures:
-![figure](./img/val.png)
+![figure](https://raw.githubusercontent.com/rinkwitz/CNN_example_for_classifying_MNIST/master/img/acc.png)
