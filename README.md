@@ -32,4 +32,4 @@ Give an example
 ```
 
 # Add Figures:
-![alt description](https://...)
+![figure](./img/val.png)
