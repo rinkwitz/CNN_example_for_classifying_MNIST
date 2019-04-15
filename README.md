@@ -32,4 +32,5 @@ Give an example
 ```
 
 # Add Figures:
+![figure](/img/acc.png){:class="img-responsive"}
 ![figure](/img/acc.png){:height="50%" width="50%"}
