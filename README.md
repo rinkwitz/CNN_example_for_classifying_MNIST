@@ -33,9 +33,9 @@ The MNIST dataset consists of 28x28 greyscale images. Another way of visualizing
 
 In order for gradient descent to converge as fast as possible, we need to standardize our data. For this we substract the mean and divide by the standard deviation feature-wise:
 ```math
-x_{\text{std}}=\frac{x-\mu_{\text{feat}}}{\sigma_{\text{feat}}}
+a
 ```
-
+x_{\text{std}}=\frac{x-\mu_{\text{feat}}}{\sigma_{\text{feat}}}
 
 ## Authors
 
