@@ -22,13 +22,13 @@ pip3 install tensorflow==1.11.0 tensorboard==1.11.0 keras==2.2.4 matplotlib==3.0
 The script produces several figures. It displays the first 9 training examples and their labels.
 
 <p align="center">
-<img src="/img/Figure_0.png" alt="examples and labels" width="700">
+<img src="/img/Figure_0.png" alt="examples and labels" width="750">
 </p>
 
 The MNIST dataset consists of 28x28 greyscale images. Another way of visualizing the images would be to make a 3D plot with coordinates (x, y, z). This way we could use (x, y) to describe the position of a pixel in the image and the z-coordinate to show the 8-bit greyscale vale of that pixel. The next figure shows the first 4 training example and their labels.
 
 <p align="center">
-<img src="/img/Figure_1.png" alt="examples and labels in 3D" width="500">
+<img src="/img/Figure_1.png" alt="examples and labels in 3D" width="750">
 </p>
 
 In order for gradient descent to converge as fast as possible, we need to standardize our data. For this we substract the mean and divide by the standard deviation feature-wise:
@@ -40,7 +40,7 @@ In order for gradient descent to converge as fast as possible, we need to standa
 Here are the first 4 training examples after standardization. 
 
 <p align="center">
-<img src="/img/Figure_2.png" alt="examples and labels in 3D after standardization" width="500">
+<img src="/img/Figure_2.png" alt="examples and labels in 3D after standardization" width="750">
 </p>
 
 ## Visualizations of Training and Validation
@@ -50,21 +50,21 @@ The CNN is trained over 10 epochs using the Adam optimizer and categorical cross
 * Training set:
 
 <p align="center">
-<img src="/img/acc.png" alt="training accuracy" width="500">
+<img src="/img/acc.png" alt="training accuracy" width="750">
 </p>
 
 <p align="center">
-<img src="/img/loss.png" alt="training loss" width="500">
+<img src="/img/loss.png" alt="training loss" width="750">
 </p>
 
 * Validation set:
 
 <p align="center">
-<img src="/img/val_acc.png" alt="validation accuracy" width="500">
+<img src="/img/val_acc.png" alt="validation accuracy" width="750">
 </p>
 
 <p align="center">
-<img src="/img/val_loss.png" alt="validation loss" width="500">
+<img src="/img/val_loss.png" alt="validation loss" width="750">
 </p>
 
 The figures were created using Tensorboard as training monitoring software. To start Tensorboard in your localhost use the following in terminal.
@@ -78,7 +78,7 @@ tensorboard --logdir=logs/
 Here are some random predictions over the testing set. In the title you can see the predicted label and the probability whith which the CNN has assigned the label.
 
 <p align="center">
-<img src="/img/Figure_3.png" alt="prediction" width="500">
+<img src="/img/Figure_3.png" alt="prediction" width="750">
 </p>
 
 ## Authors
