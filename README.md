@@ -32,4 +32,4 @@ Give an example
 ```
 
 # Add Figures:
-<img src="/img/acc.png" alt="training accuracy" width="800">
+<img src="/img/acc.png" alt="training accuracy" width="500">
