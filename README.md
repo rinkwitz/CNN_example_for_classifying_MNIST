@@ -4,7 +4,7 @@ This project is intended for educational purposes. It demonstrates the effective
 
 ## Prerequisites
 
-The software makes use of the following libraries for training and visualization:
+The software makes use of the following libraries for training and visualization.
 
 * Tensorflow 1.11.0
 * Tensorboard 1.11.0
@@ -17,7 +17,7 @@ You can install the dependencies using:
 pip3 install tensorflow==1.11.0 tensorboard==1.11.0 keras==2.2.4 matplotlib==3.0.0
 ```
 
-## Visualizations of data and preprocessing
+## Visualizations of Data and Preprocessing
 
 The script produces several figures. It displays the first 9 training examples and their labels.
 
@@ -37,6 +37,49 @@ In order for gradient descent to converge as fast as possible, we need to standa
 <img src="https://latex.codecogs.com/gif.latex?x_{\text{std}}=\frac{x-\mu_{\text{feat}}}{\sigma_{\text{feat}}}" title="equation 01" />
 </p>
 
+Here are the first 4 training examples after standardization. 
+
+<p align="center">
+<img src="/img/Figure_2.png" alt="examples and labels in 3D after standardization" width="500">
+</p>
+
+## Visualizations of Training and Validation
+
+The CNN is trained over 10 epochs using the Adam optimizer and categorical crossentropy as loss. The following figure show the accuracy and loss on training and validation set over the training process. 
+
+* Training set:
+
+<p align="center">
+<img src="/img/acc.png" alt="training accuracy" width="500">
+</p>
+
+<p align="center">
+<img src="/img/loss.png" alt="training loss" width="500">
+</p>
+
+* Validation set:
+
+<p align="center">
+<img src="/img/val_acc.png" alt="validation accuracy" width="500">
+</p>
+
+<p align="center">
+<img src="/img/val_loss.png" alt="validation loss" width="500">
+</p>
+
+The figures were created using Tensorboard as training monitoring software. To start Tensorboard in your localhost use the following in terminal.
+
+```
+tensorboard --logdir=logs/
+```
+
+## Results
+
+Here are some random predictions over the testing set. In the title you can see the predicted label and the probability whith which the CNN has assigned the label.
+
+<p align="center">
+<img src="/img/Figure_3.png" alt="prediction" width="500">
+</p>
 
 ## Authors
 
@@ -49,4 +92,11 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Useful Links:
 * [Visualization of 2D CNN](http://scs.ryerson.ca/~aharley/vis/conv/flat.html)
 * [Blog entry on using Tensorboard](https://fizzylogic.nl/2017/05/08/monitor-progress-of-your-keras-based-neural-network-using-tensorboard/)
+
+## Acknowledgements:
+
+The formulas of this README were create using:
+* [Codecogs online Latex editor](https://www.codecogs.com/latex/eqneditor.php)
+
+
 
