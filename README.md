@@ -1,6 +1,6 @@
 # CNN example for classifying MNIST
 
-This project is intended for educational purposes. It demonstrates the effectiveness of a simple CNN architecture classifying the MNIST dataset. The neural network is trained solely on the CPU in reasonable time (~5 min).
+This project is intended for educational purposes. It demonstrates the effectiveness of a simple CNN architecture classifying the MNIST data set. The neural network is trained solely on the CPU in reasonable time (~5 min).
 
 ## Prerequisites
 
