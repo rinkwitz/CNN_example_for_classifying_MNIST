@@ -29,19 +29,9 @@ The CNN_example_for_classifying_MNIST  is licensed under the terms of the MIT li
 
 
 # Add Figures:
-![Install Aimeos TYPO3 extension](https://aimeos.org/docs/images/Aimeos-typo3-extmngr-install.png)
+![alt description](https://...)
 
 # Add Code Snippets:
 ```
-'DB' => [
-    'Connections' => [
-        'Default' => [
-            'tableoptions' => [
-                'charset' => 'utf8',
-                'collate' => 'utf8_bin',
-            ],
-            // ...
-        ],
-    ],
-],
+code snippet goes here ... 
 ```
