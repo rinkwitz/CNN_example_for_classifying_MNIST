@@ -25,7 +25,7 @@ The script produces several figures. It displays the first 9 training examples a
 <img src="/img/Figure_0.png" alt="examples and labels" width="750">
 </p>
 
-The MNIST data set consists of 28 x 28 grayscale images. Another way of visualizing the images would be to make a 3D plot with coordinates (x, y, z). This way we could use (x, y) to describe the position of a pixel in the image and the z-coordinate to show the 8-bit grayscale vale of that pixel. The next figure shows the first 4 training example and their labels.
+The MNIST data set consists of 28 x 28 grayscale images. Another way of visualizing the images would be to make a 3D plot with coordinates (x, y, z). This way we could use (x, y) to describe the position of a pixel in the image and the z-coordinate to show the 8-bit grayscale value of that pixel. The next figure shows the first 4 training example and their labels.
 
 <p align="center">
 <img src="/img/Figure_1.png" alt="examples and labels in 3D" width="750">
