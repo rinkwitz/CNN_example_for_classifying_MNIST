@@ -93,7 +93,7 @@ model.fit(x_train, y_train, epochs=10, batch_size=32, callbacks=[tensorboard], s
 
 # show final metrics and loss on both test and training set:
 testing_scores = model.evaluate(x_test, y_test, batch_size=32, verbose=0)
-print('\naccuracy:\t', round(testing_scores[1] * 100, 3), '%',
+print('\ntesting accuracy:\t', round(testing_scores[1] * 100, 3), '%',
       '\ntesting loss:\t\t', round(testing_scores[0], 3))
 training_scores = model.evaluate(x_train, y_train, batch_size=32, verbose=0)
 print('\ntraining accuracy:\t', round(training_scores[1] * 100, 3), '%',
