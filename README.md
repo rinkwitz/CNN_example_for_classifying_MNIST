@@ -28,7 +28,7 @@ The script produces several figures. It displays the first 9 training examples a
 The MNIST data set consists of 28 x 28 grayscale images. Another way of visualizing the images would be to make a 3D plot with coordinates (x, y, z). This way we could use (x, y) to describe the position of a pixel in the image and the z-coordinate to show the 8-bit grayscale value of that pixel. The next figure shows the first 4 training example and their labels.
 
 <p align="center">
-<img src="/img/Figure_1.png" alt="examples and labels in 3D" width="750">
+<img src="/img/Figure_1.png" alt="examples and labels in 3D" width="950">
 </p>
 
 In order for gradient descent to converge as fast as possible, we need to standardize our data. For this we subtract the mean and divide by the standard deviation feature-wise:
@@ -40,7 +40,7 @@ In order for gradient descent to converge as fast as possible, we need to standa
 Here are the first 4 training examples after standardization. 
 
 <p align="center">
-<img src="/img/Figure_2.png" alt="examples and labels in 3D after standardization" width="750">
+<img src="/img/Figure_2.png" alt="examples and labels in 3D after standardization" width="950">
 </p>
 
 ## Visualizations of Training and Validation
