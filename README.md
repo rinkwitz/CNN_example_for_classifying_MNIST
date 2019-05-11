@@ -10,6 +10,7 @@ The software makes use of the following libraries for training and visualization
 * Tensorboard 1.11.0
 * Keras 2.2.4
 * Matplotlib 3.0.0
+* Numpy 1.16.3
 
 You can install the dependencies using:
 
