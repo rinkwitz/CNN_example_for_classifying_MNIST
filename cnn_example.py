@@ -3,6 +3,7 @@ from mpl_toolkits import mplot3d
 import keras
 from keras.models import Sequential
 from keras.layers import *
+import numpy as np
 
 # load dataset:
 from keras.datasets import mnist

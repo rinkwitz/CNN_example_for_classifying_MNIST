@@ -14,7 +14,7 @@ The software makes use of the following libraries for training and visualization
 You can install the dependencies using:
 
 ```
-pip3 install tensorflow==1.11.0 tensorboard==1.11.0 keras==2.2.4 matplotlib==3.0.0
+pip3 install tensorflow==1.11.0 tensorboard==1.11.0 keras==2.2.4 matplotlib==3.0.0 numpy
 ```
 
 ## Visualizations of Data and Preprocessing
